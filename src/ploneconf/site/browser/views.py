@@ -35,7 +35,7 @@ class DemoView(BrowserView):
             talk = dict(
                 title=item['title'],
                 subjects=', '.join(item['subjects']),
-                url=url
+                url=url,
             )
             results.append(talk)
         return sorted(results, key=itemgetter('title'))
@@ -52,11 +52,7 @@ class TalkListView(BrowserView):
 
     def talks(self):
         results = []
-        portal_catalog = api.portal.get_tool('portal_catalog')
-        current_path = "/".join(self.context.getPhysicalPath())
-
-        brains = portal_catalog(portal_type="talk",
-                                path=current_path)
+        brains = api.content.find(context=self.context, portal_type='talk')
         for brain in brains:
             talk = brain.getObject()
             results.append({
