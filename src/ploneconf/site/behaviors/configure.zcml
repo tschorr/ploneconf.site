@@ -9,4 +9,10 @@
       provides=".social.ISocial"
       />
 
+  <plone:behavior
+      title="Talk"
+      description="Marker interface for talks to be able to bind views to."
+      provides="..interfaces.ITalk"
+      />
+
 </configure>
