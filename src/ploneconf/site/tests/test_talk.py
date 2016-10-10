@@ -105,3 +105,22 @@ class TalkFunctionalTest(unittest.TestCase):
         self.browser.open(self.portal_url + '/my-talk')
 
         self.assertTrue('My Talk' in self.browser.contents)
+
+    def test_custom_template(self):
+        setRoles(self.portal, TEST_USER_ID, ['Manager'])
+        self.portal.invokeFactory(
+            "talk",
+            id="my-talk",
+            title="My Talk",
+        )
+
+        import transaction
+        transaction.commit()
+
+        self.browser.open(self.portal_url + '/training')
+
+        self.assertIn('Dexterity is the new default', self.browser.contents)
+        self.assertIn(
+            'Diazo is a powerful tool for theming', self.browser.contents)
+        self.assertIn('Magic templates in Plone 5', self.browser.contents)
+        self.assertIn('The State of Plone', self.browser.contents)
