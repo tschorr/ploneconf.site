@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from Products.Five.browser import BrowserView
 from operator import itemgetter
+from plone.dexterity.browser.view import DefaultView
+from Products.Five.browser import BrowserView
 
 
 class DemoView(BrowserView):
-    """ This does nothing so far
-    """
+    """A demo listing"""
 
     def the_title(self):
         return u'A list of talks:'
@@ -38,3 +38,8 @@ class DemoView(BrowserView):
             )
             results.append(talk)
         return sorted(results, key=itemgetter('title'))
+
+
+class TalkView(DefaultView):
+    """ The default view for talks
+    """
