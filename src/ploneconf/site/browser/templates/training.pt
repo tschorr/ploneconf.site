@@ -25,8 +25,7 @@
         <th>Topics</th>
     </tr>
 
-    <tr tal:repeat="talk python:talks"
-        class="${python: 'odd' if repeat.talk.odd else 'even'}">
+    <tr tal:repeat="talk python:talks">
         <td>
             <a href="${python:talk.get('url', 'https://www.google.com/search?q=%s' % talk['title'])}">
                 ${python:talk['title']}
