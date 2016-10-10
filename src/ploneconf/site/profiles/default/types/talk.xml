@@ -25,6 +25,7 @@
   <element value="plone.app.content.interfaces.INameFromTitle"/>
   <element value="ploneconf.site.behaviors.social.ISocial"/>
   <element value="ploneconf.site.interfaces.ITalk"/>
+  <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
  </property>
  <property name="schema"></property>
  <property name="model_source"></property>
