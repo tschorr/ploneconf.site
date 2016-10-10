@@ -35,4 +35,13 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="talklistview"
+      for="*"
+      layer="zope.interface.Interface"
+      class=".views.TalkListView"
+      template="templates/talklistview.pt"
+      permission="zope2.View"
+      />
+
 </configure>
