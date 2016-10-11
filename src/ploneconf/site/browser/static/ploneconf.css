@@ -24,3 +24,14 @@ body.userrole-reviewer #formfield-form-widgets-IEventBasic-open_end {
 .template-view.portaltype-sponsor fieldset#folder-listing {
     display: none;
 }
+
+.sponsor {
+    display: inline-block;
+    margin: 0 1em 1em 0;
+}
+
+.sponsor:hover {
+    box-shadow: 0 0 8px #000000;
+    -moz-box-shadow: 0 0 8px #000000;
+    -webkit-box-shadow: 0 0 8px #000000;
+}
