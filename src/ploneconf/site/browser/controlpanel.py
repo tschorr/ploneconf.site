@@ -22,6 +22,14 @@ class IPloneconfControlPanel(Interface):
         required=False,
     )
 
+    rooms = schema.Tuple(
+        title=u'Available Rooms for the conference',
+        default=(u'101', u'201', u'Auditorium'),
+        missing_value=None,
+        required=False,
+        value_type=schema.TextLine()
+    )
+
 
 class PloneconfControlPanelForm(RegistryEditForm):
     schema = IPloneconfControlPanel
