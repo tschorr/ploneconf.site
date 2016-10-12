@@ -39,7 +39,7 @@
   </record>
 
   <!-- the plonconf bundle -->
-  <records prefix="plone.bundles/ursapharm-bundle"
+  <records prefix="plone.bundles/ploneconf-bundle"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
       <element>ploneconf-main</element>
