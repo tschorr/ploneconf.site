@@ -14,6 +14,10 @@
             </span>
         </p>
 
+        <p tal:content="structure view/w/room/render">
+            Room
+        </p>
+
         <div tal:content="structure view/w/details/render">
             Details
         </div>
