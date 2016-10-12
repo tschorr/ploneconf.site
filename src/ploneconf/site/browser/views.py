@@ -62,6 +62,7 @@ class TalkListView(BrowserView):
                 'audience': ', '.join(talk.audience),
                 'type_of_talk': talk.type_of_talk,
                 'speaker': talk.speaker,
+                'room': talk.room,
                 'uuid': brain.UID,
                 })
         return results
