@@ -55,6 +55,15 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="frontpageview"
+      for="*"
+      layer="ploneconf.site.interfaces.IPloneconfSiteLayer"
+      class=".frontpage.FrontpageView"
+      template="templates/frontpage.pt"
+      permission="zope2.View"
+      />
+
   <browser:viewlet
       name="sponsorsviewlet"
       manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
